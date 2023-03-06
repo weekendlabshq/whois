@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
             <h1>What is WHOIS?</h1>
             <p>WHOIS is a protocol that provides information about domain names, IP addresses, and other resources registered with the Internet Assigned Numbers Authority (IANA). It is a public database that stores information about domain name registrants, such as their name, address, email, phone number, and other relevant information.</p>
             <p>The WHOIS protocol is used to query this database and retrieve information about a domain name, including its registration and expiration date, registrar information, and name servers. This information is helpful for website owners, domain buyers and sellers, and law enforcement agencies.</p>
-            <p>While the WHOIS database is publicly accessible, some registrars and domain privacy services may provide a way to hide the registrant's personal information from public view. In general, domain registrars are required to collect and maintain accurate and up-to-date WHOIS information for their customers.</p>
+            <p>While the WHOIS database is publicly accessible, some registrars and domain privacy services may provide a way to hide the registrant&apos;s personal information from public view. In general, domain registrars are required to collect and maintain accurate and up-to-date WHOIS information for their customers.</p>
           </div>
         </section>
       </Layout>
