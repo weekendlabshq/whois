@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import { IoSearchSharp } from "react-icons/io5";
 
 export default function Whois(): JSX.Element {
     const router = useRouter();
@@ -65,7 +66,7 @@ export default function Whois(): JSX.Element {
             <Layout>
                 <section className="hero">
                     <div className="container">
-                        <h1>{domain}</h1>
+                        <h1>{domain}<Link href={`https://${domain}`} target="_blank" rel="nofollow noreferrer" className="external"></Link></h1>
                         <form onSubmit={handleSubmit}>
                             <input
                                 type="text"
@@ -73,7 +74,7 @@ export default function Whois(): JSX.Element {
                                 onChange={(e) => setDomainValue(e.target.value)}
                                 placeholder="Type in any domain name..."
                             />
-                            <button type="submit">Search <span>WHOIS</span></button>
+                            <button type="submit"><IoSearchSharp />&nbsp;Search&nbsp;<span>WHOIS</span></button>
                         </form>
                     </div>
                 </section>

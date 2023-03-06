@@ -130,6 +130,23 @@ h3 {
 .hero {
   padding: 0;
 
+  .external {
+    border-bottom: 0;
+
+    &:hover {
+      transition: 0.2s;
+
+      &:after {
+        opacity: 1 !important;
+      }
+    }
+
+    &:after {
+      font-size: 1.5rem !important;
+      margin-left: .5rem !important;
+    }
+  }
+
   h1 {
     font-size: 3rem;
     margin: 0;
@@ -196,7 +213,12 @@ h3 {
       font-weight: 500;
       align-items: center;
       justify-content: center;
-      min-width: 7rem;
+      min-width: 8rem;
+      display: flex;
+
+      svg {
+        font-size: 1rem;
+      }
 
       &:hover {
         background: var(--black);
@@ -407,6 +429,7 @@ h3 {
     }
   }
 }
+
 .error {
   font-size: 1rem;
 }
