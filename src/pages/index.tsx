@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
       <Layout>
         <section className="hero">
           <div className="container">
-            <h1>WHOIS by Weekend Labs</h1>
+            <h1>WHOIS by <br className='no-desktop' /> Weekend Labs</h1>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
