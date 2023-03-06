@@ -8,7 +8,7 @@ export default function Footer() {
                 <ul className="footer__list">
                     <li className="footer__list__item">
                         <Link href="/" className="footer__list__link">
-                            WHOIS Search
+                            Home
                         </Link>
                     </li>
                     <li className="footer__list__item">
