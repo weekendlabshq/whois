@@ -1,0 +1,10 @@
+/* Breakpoints */
+@import "breakpoints/base.scss";
+@media (min-width: 992px) {
+  @import "breakpoints/992up.scss";
+}
+
+/* Partials */
+@import "partials/reset.scss";
+@import "partials/variables.scss";
+@import "partials/grid.scss";
