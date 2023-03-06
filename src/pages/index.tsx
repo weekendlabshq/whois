@@ -1,12 +1,12 @@
 import React, { useState, FormEvent } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Script from "next/script";
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import { IoSearchSharp } from "react-icons/io5";
+import { GoogleAdSense } from "nextjs-google-adsense";
 
 export default function Home(): JSX.Element {
   const router = useRouter();
@@ -56,11 +56,7 @@ export default function Home(): JSX.Element {
         <section className='ad'>
           <div className='container'>
             <div className='ad__frame'>
-              <Script id="Adsense-id" data-ad-client="ca-pub-4778248135015291"
-                async strategy="afterInteractive"
-                onError={(e) => { console.error('Script failed to load', e) }}
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4778248135015291"
-              />
+              <GoogleAdSense publisherId="pub-4778248135015291" />
             </div>
           </div>
         </section>

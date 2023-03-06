@@ -1,11 +1,9 @@
 import React, { useState, FormEvent } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Script from "next/script";
 import Layout from '../../components/Layout';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { useRouter } from 'next/router';
 
 export default function Changelog(): JSX.Element {
     return (
