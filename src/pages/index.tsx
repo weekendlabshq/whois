@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>WHOIS API</title>
+        <title>WHOIS by Weekend Labs</title>
         <link rel="icon" href="./static/favicon.ico" />
         <meta
           name="description"
