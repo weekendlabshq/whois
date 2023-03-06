@@ -11,7 +11,7 @@ interface WHOISProps {
 const WHOIS: React.FC<WHOISProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <GoogleAnalytics trackPageViews />
+      <GoogleAnalytics />
       <Component {...pageProps} />
     </>
   );
