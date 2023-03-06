@@ -41,6 +41,7 @@ export default function Home(): JSX.Element {
         <section className="hero">
           <div className="container">
             <h1>WHOIS by <br className='no-desktop' /> Weekend Labs</h1>
+            <p>Unlock the secrets of any domain with just one WHOIS search.</p>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"

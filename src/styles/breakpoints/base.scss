@@ -59,9 +59,11 @@ h3 {
     .header__logo {
       padding: .5rem 0;
 
-      a:after {
-        content: '';
-        margin-right: 0;
+      a {
+        &:after {
+          content: '';
+          margin-right: 0;
+        }
       }
     }
   }
@@ -83,6 +85,7 @@ h3 {
         align-items: center;
         display: flex;
         border-bottom: 0;
+        padding-bottom: 0;
 
         svg {
           max-width: 12rem;
@@ -159,6 +162,7 @@ h3 {
     color: #fff;
     font-size: 1.25rem;
     opacity: .85;
+    margin: .5rem 0 0;
   }
 
   a {
@@ -174,7 +178,7 @@ h3 {
 
   form {
     display: flex;
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     input {
       border: 2px solid rgba(255, 255, 255, .25);
@@ -269,6 +273,7 @@ h3 {
 
 .breadcrumbs {
   padding: 1rem 0 0;
+
   a {
     border-bottom: 0;
     text-decoration: none;

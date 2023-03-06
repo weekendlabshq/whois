@@ -11,7 +11,7 @@ export default function Changelog(): JSX.Element {
     return (
         <>
             <Head>
-                <title>WHOIS API</title>
+                <title>Changelog – WHOIS by Weekend Labs</title>
                 <link rel="icon" href="./static/favicon.ico" />
                 <meta
                     name="description"
@@ -21,6 +21,11 @@ export default function Changelog(): JSX.Element {
             </Head>
             <Header />
             <Layout>
+                <section className="breadcrumbs">
+                    <div className="container">
+                        <Link href="/">← Go back home</Link>
+                    </div>
+                </section>
                 <section className="hero">
                     <div className="container">
                         <h1>Changelog</h1>
@@ -28,7 +33,7 @@ export default function Changelog(): JSX.Element {
                 </section>
                 <section className="changelog">
                     <div className="container">
-                    <div className="changelog__item">
+                        <div className="changelog__item">
                             <h1>v1.0.1</h1>
                             <time>Mar 7, 2023</time>
                             <p>We have some quick updates for the latest version.</p>
