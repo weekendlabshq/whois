@@ -5,25 +5,33 @@ import Link from 'next/link';
 import Layout from '../../../components/Layout';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function Whois(): JSX.Element {
     const router = useRouter();
     const { domain } = router.query;
     const [domainValue, setDomainValue] = useState<string>('');
-
     const [whoisData, setWhoisData] = useState<any[]>([]);
+    const [searchAttempts, setSearchAttempts] = useState<number>(0);
+    const [lastAttemptTime, setLastAttemptTime] = useState<number>(0);
+    const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
+        const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,60}[a-zA-Z0-9]?\.[a-zA-Z]{2,}$/;
+        const now = Date.now();
+        if (searchAttempts >= 3 && now - lastAttemptTime < 5000) {
+            alert('Wow hold on there, slow it down. You have triggered the search too quickly.');
+            return;
+        }
         if (domainRegex.test(domainValue)) {
             router.push(`/whois/${domainValue}`);
+            setSearchAttempts(searchAttempts + 1);
+            setLastAttemptTime(now);
+            if (searchAttempts >= 2) {
+                setIsButtonDisabled(true);
+            }
         } else {
-            toast.error('Please enter a valid domain name.', {
-                position: toast.POSITION.TOP_CENTER,
-            });
+            alert("That is not a valid domain name.")
         }
     };
 
@@ -45,7 +53,6 @@ export default function Whois(): JSX.Element {
             {value}
         </li>
     );
-
     return (
         <>
             <Head>

@@ -162,7 +162,7 @@ h3 {
       border: 2px solid rgba(255, 255, 255, .25);
       padding: 1rem 1rem;
       font-size: 1.25rem;
-      background: #111;
+      background: #000;
       color: var(--white);
       outline: 0;
       transition: 0.2s;
@@ -171,11 +171,13 @@ h3 {
 
       &:hover {
         border: 2px solid rgba(255, 255, 255, .5);
+        background: #111;
       }
 
       &:focus,
       &:active {
         border: 2px solid rgba(255, 255, 255, .9);
+        background: #111;
       }
     }
 
@@ -404,4 +406,7 @@ h3 {
       }
     }
   }
+}
+.error {
+  font-size: 1rem;
 }
