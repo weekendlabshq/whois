@@ -39,7 +39,7 @@ export default function Header() {
             <div className={isActive ? "container active" : "container"}>
                 <div className="header__logo">
                     <Link href="/">
-                        <span className='header__logo__whois'>WHOIS</span>
+                        <span className='header__logo__whois'>💾 WHOIS</span>
                     </Link>
                 </div>
                 <ul className="header__list">
