@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import { IoSearchSharp } from "react-icons/io5";
-import { GoogleAdSense } from "nextjs-google-adsense";
+import { ResponsiveAdUnit } from "nextjs-google-adsense";
 
 export default function Home(): JSX.Element {
   const router = useRouter();
@@ -56,7 +56,10 @@ export default function Home(): JSX.Element {
         <section className='ad'>
           <div className='container'>
             <div className='ad__frame'>
-              <GoogleAdSense publisherId="pub-4778248135015291" />
+              <ResponsiveAdUnit
+                publisherId="pub-4778248135015291"
+                slotId="2567259876"
+                type="after-home-hero" />
             </div>
           </div>
         </section>
