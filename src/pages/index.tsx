@@ -6,6 +6,7 @@ import Layout from '../../components/Layout';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
+import { IoSearchSharp } from "react-icons/io5";
 
 export default function Home(): JSX.Element {
   const router = useRouter();
@@ -13,7 +14,15 @@ export default function Home(): JSX.Element {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/whois/${domain}`);
+    const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,60}[a-zA-Z0-9]?\.[a-zA-Z]{2,}$/;
+
+    if (domain.trim() !== '') {
+      if (!domainRegex.test(domain)) {
+        alert('🫤 Sorry, that is not a valid domain name.');
+        return;
+      }
+      router.push(`/whois/${domain}`);
+    }
   };
 
   return (
@@ -39,7 +48,7 @@ export default function Home(): JSX.Element {
                 onChange={(e) => setDomain(e.target.value)}
                 placeholder="Type in any domain name..."
               />
-              <button type="submit">Search <span>WHOIS</span></button>
+              <button type="submit"><IoSearchSharp />&nbsp;Search&nbsp;<span>WHOIS</span></button>
             </form>
           </div>
         </section>

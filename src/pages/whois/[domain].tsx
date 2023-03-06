@@ -64,6 +64,11 @@ export default function Whois(): JSX.Element {
             </Head>
             <Header />
             <Layout>
+                <section className="breadcrumbs">
+                    <div className="container">
+                        <Link href="/">← Go back home</Link>
+                    </div>
+                </section>
                 <section className="hero">
                     <div className="container">
                         <h1>{domain}<Link href={`https://${domain}`} target="_blank" rel="nofollow noreferrer" className="external"></Link></h1>

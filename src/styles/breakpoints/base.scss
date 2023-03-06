@@ -151,7 +151,7 @@ h3 {
   h1 {
     font-size: 3rem;
     margin: 0;
-    padding: 3rem 0 0;
+    padding: 2rem 0 0;
     color: #fff;
   }
 
@@ -222,9 +222,10 @@ h3 {
       }
 
       &:hover {
-        background: var(--black);
+        background: var(--primary-hover);
         color: var(--white);
         cursor: pointer;
+        border: 2px solid var(--primary-hover);
       }
 
       @media (max-width: 992px) {
@@ -264,6 +265,19 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.breadcrumbs {
+  padding: 1rem 0 0;
+  a {
+    border-bottom: 0;
+    text-decoration: none;
+    color: var(--link);
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
 }
 
 .about {
