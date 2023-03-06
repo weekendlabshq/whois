@@ -56,10 +56,6 @@ export default function Home(): JSX.Element {
         <section className='ad'>
           <div className='container'>
             <div className='ad__frame'>
-              <ResponsiveAdUnit
-                publisherId="pub-4778248135015291"
-                slotId="2567259876"
-                type="after-home-hero" />
             </div>
           </div>
         </section>

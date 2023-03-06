@@ -54,7 +54,6 @@ h3 {
 
   &__wl {
     border-bottom: 1px solid rgba(255, 255, 255, .15);
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
     .header__logo {
       padding: .5rem 0;
@@ -96,8 +95,8 @@ h3 {
         }
 
         span {
-          font-size: 1.5rem;
-          font-weight: 500;
+          font-size: 1.25rem;
+          font-weight: 600;
         }
       }
     }
